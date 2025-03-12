@@ -5,14 +5,12 @@ defmodule Calculations.Recursion.PrintDigits do
   def upto(0), do: 0
 
   def upto(num) do
-    IO.puts(num)
     upto(num - 1)
   end
 
   def upt(0), do: 0
 
   def upt(num) do
-    upt(num - 1)
     IO.puts(num)
   end
 
