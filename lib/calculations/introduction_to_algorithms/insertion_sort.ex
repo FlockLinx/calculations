@@ -18,7 +18,7 @@ defmodule Calculations.IntroductionToAlgorithms.InsertionSort do
 
   defp insert(x, []), do: [x]
   defp insert(x, [h | t]) when x <= h, do: [x, h | t]
-  defp insert(x, [h|t]), do: [h | insert(x, t)]
+  defp insert(x, [h | t]), do: [h | insert(x, t)]
 
   # can I solve using for loop and index
   #

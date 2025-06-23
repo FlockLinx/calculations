@@ -35,7 +35,7 @@ defmodule Calculations.Codewars.ArrayDiff do
   def array_diff([head | tail], b) do
     case contains?(head, b) do
       true -> array_diff(tail, b)
-      false ->  [head | array_diff(tail, b)]
+      false -> [head | array_diff(tail, b)]
     end
   end
 

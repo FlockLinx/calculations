@@ -6,7 +6,7 @@ defmodule Calculations.Codewars.ReverseString do
   def reverse_list(list, acc \\ [])
   def reverse_list([], acc), do: acc
 
-  def reverse_list([h|t], acc) do
+  def reverse_list([h | t], acc) do
     reverse_list(t, [h | acc])
   end
 end

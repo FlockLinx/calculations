@@ -9,12 +9,14 @@ defmodule Calculations.Codewars.DigitalRoot do
   end
 
   def sum(n, m \\ 0)
+
   def sum(n, m) when n > 0 do
-    m = m + rem(n,10)
+    m = m + rem(n, 10)
     n = div(n, 10)
 
     sum(n, m)
   end
+
   def sum(0, m) when m >= 10, do: sum(m, 0)
 
   def sum(0, m), do: m

@@ -9,16 +9,15 @@ defmodule Calculations.Codewars.TortoiseRace do
   def race(v1, v2, _g) when v1 >= v2, do: [-1, -1, -1]
   def race(v1, v2, g) when v1 >= v2, do: nil
 
-
   # do not need to transform vars
   # relative velocity is v2 - v1
   # t = g / (v2 - v1) -> formula
   def race(v1, v2, g) do
     vr = v2 - v1
-    t = g/vr
+    t = g / vr
     hours = trunc(t)
     minutes = trunc((t - hours) * 60)
-    seconds = trunc((((t - hours) * 60) - ((t - hours) * 60)) * 60)
+    seconds = trunc(((t - hours) * 60 - (t - hours) * 60) * 60)
     [hours, minutes, seconds]
   end
 end

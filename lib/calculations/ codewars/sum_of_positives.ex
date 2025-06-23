@@ -8,6 +8,6 @@ defmodule Calulations.Codewars.SumOfPositives do
   # had to use acc as auxiliar
 
   def positive_sum([]), do: 0
-  def positive_sum([h|t]) when h > 0, do: h + positive_sum(t)
-  def positive_sum([_h|t]), do: positive_sum(t)
+  def positive_sum([h | t]) when h > 0, do: h + positive_sum(t)
+  def positive_sum([_h | t]), do: positive_sum(t)
 end
