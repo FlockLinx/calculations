@@ -8,4 +8,11 @@ defmodule Calculations.Codewars.Evenator do
 
   def even?(n) when rem(n, 2) == 0, do: true
   def even?(n), do: false
+
+  def reverse([]), do: []
+  def reverse([n]), do: [n]
+  def reverse([h|t]), do: reverse(t) ++ [h]
 end
+
+
+
