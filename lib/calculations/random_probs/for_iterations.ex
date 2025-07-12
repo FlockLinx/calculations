@@ -34,7 +34,7 @@ defmodule Calculations.RandomProbs.ForIterations do
   def double_itens(list), do: for x <- list, do: x*2
   def pow_itens(list), do: for x <- list, do: x*x
   def double_with_original(list), do: for x <- list, into: %{}, do: {x, x*2}
-  def convert_string_list_to_list_int(string_list), do: for x <- list, do: String.to_integer(x)
+  def convert_string_list_to_list_int(string_list), do: for x <- string_list, do: String.to_integer(x)
 
   def count_words(phrase) do
     s = phrase |> String.split(" ", trim: true)
