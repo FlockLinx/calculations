@@ -4,7 +4,7 @@ defmodule Calculation.Codewars.PlayBanjo do
     [h | t] = string_list
 
     case h == "R" || h == "r" do
-      true ->  name <> " plays banjo"
+      true -> name <> " plays banjo"
       false -> name <> " does not play banjo"
     end
   end

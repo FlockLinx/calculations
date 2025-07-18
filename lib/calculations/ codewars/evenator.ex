@@ -11,8 +11,5 @@ defmodule Calculations.Codewars.Evenator do
 
   def reverse([]), do: []
   def reverse([n]), do: [n]
-  def reverse([h|t]), do: reverse(t) ++ [h]
+  def reverse([h | t]), do: reverse(t) ++ [h]
 end
-
-
-

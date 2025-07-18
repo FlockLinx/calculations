@@ -20,6 +20,6 @@ defmodule Calculations.Codewars.ArrayDiff2 do
   # compare each element between and add different itens to a new list then return
 
   def array_diff(a, b) do
-    for x <- a, not (x in b), do: x
+    for x <- a, x not in b, do: x
   end
 end

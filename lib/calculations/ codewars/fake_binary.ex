@@ -5,10 +5,11 @@ defmodule Calculations.Codewars.FakeBinary do
   end
 
   def fake_generate([]), do: ""
-  def fake_generate([h | t]) do 
+
+  def fake_generate([h | t]) do
     case String.to_integer(h) >= 5 do
       true -> "1" <> fake_generate(t)
-      false ->"0" <> fake_generate(t)
+      false -> "0" <> fake_generate(t)
     end
-  end 
+  end
 end
