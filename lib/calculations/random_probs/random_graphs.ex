@@ -5,13 +5,12 @@ defmodule Calculations.RandomProbs.RandomGraps do
   # how can I detect isolated nodes?
   # can I show the algo path?
 
-
-
   def bfs(graph, start) do
     bfs(graph, [start], MapSet.new(), MapSet.new())
   end
 
   defp bfs(_graph, [], visited, path), do: {MapSet.to_list(visited), path}
+
   defp bfs(graph, [current | queue], visited, path) do
     if MapSet.member?(visited, current) do
       path = MapSet.put(path, current)
@@ -27,14 +26,15 @@ defmodule Calculations.RandomProbs.RandomGraps do
   def dfs(graph, start) do
     dfs(graph, start, MapSet.new())
   end
-  
+
   defp dfs(graph, start, visited) do
-    #base case maybe?
+    # base case maybe?
     if MapSet.member?(visited, start) do
       visited
     else
       visited = MapSet.put(visited, start)
-      for neighbor <- graph[start] || [], reduce: visited do  
+
+      for neighbor <- graph[start] || [], reduce: visited do
         acc -> dfs(graph, neighbor, acc)
       end
     end

@@ -32,8 +32,6 @@ defmodule Calculations.RandomProbs.Graphs.TriggerBombs do
       visited = MapSet.put(visited, node)
 
       Enum.reduce(graph[node] || [], visited, fn neighbor, acc ->
-        require IEx
-        IEx.pry()
         dfs(graph, neighbor, acc)
       end)
     end

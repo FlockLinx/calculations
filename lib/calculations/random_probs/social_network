@@ -1,0 +1,48 @@
+social network influence spread
+
+you are given a directed graph representing a social network and a set of initially "influenced" nodes.
+determine how influence spreads throught the network over time. A node becomes influenced if at least k
+of its incoming neighbors are already influenced. return the total number of influenced nodes after
+the influence has fully propagated.
+
+Problem statement
+
+Given a directed graph where each edge represents a social connection (follower relationship), and an initial
+set of influenced nodes, simulate thespread of influence through the network. In each round, a node becomes
+influenced if it has at least k influenced neighbors pointing to it (incomming edges from influenced nodes).
+
+The process continues until no new nodes can be influenced in a round.
+
+Rules
+
+Influence spread in discrete rounds
+A node becomes influenced if it has at least K influenced incoming neighbors
+Once a node is influenced, it remains influenced
+The process stops when no new nodes are influenced in a round
+Return the total count of influenced nodes at the end
+
+Constraints
+
+1 <= n <= 1000 (number of nodes)
+0 <= edges.length <= n * (n-1)
+1 <= k <= n (threshold for influence)
+1 <= initial.length <= n (initially influenced nodes)
+Node IDs are in range [0, n-1]
+No self-loops or duplicate edges
+Graph may have cycles
+
+examples
+
+
+inputs:
+
+n = 6
+
+edges = [[0,2], [1,2],[2,3],[2,4],[3,5],[4,5],[1,3]....]
+k = 2
+initial = [0,1]
+
+graph visualization
+
+
+

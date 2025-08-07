@@ -13,13 +13,14 @@ defmodule Calculations.Codewars.BinaryToDecimal do
   # when [] sum all results 16+4+2 == 22
 
   def bin_to_dec(string) do
-   list = String.graphemes(string)
-   len = length list
-   find_dec(list, len-1)
+    list = String.graphemes(string)
+    len = length(list)
+    find_dec(list, len - 1)
   end
 
   def find_dec([], _len), do: 0
-  def find_dec([h|t], len) do
-    ((2 ** len) * String.to_integer(h)) + find_dec(t, len-1)
+
+  def find_dec([h | t], len) do
+    2 ** len * String.to_integer(h) + find_dec(t, len - 1)
   end
 end
