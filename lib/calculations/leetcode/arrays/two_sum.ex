@@ -1,17 +1,18 @@
 defmodule Calculations.Leetcode.Arrays.TwoSum do
-  #  def solution(nums, target) do
-  # for {idx, value} <- list_to_map(nums) do
-  #   if (value - taget) in Map.values(nums) do
-  #     nums
-  #   else
-  #     nums
-  #   end
-  # end
-  # end
+  # solution must be O(n)
+  # traverse array only one time
+  # use map
+  # use complement - target
 
-  def list_to_map(nums) do
-    for {value, index} <- Enum.with_index(nums), into: %{} do
-      {index, value}
-    end
+  def solution(nums, target) do
+    Enum.reduce_while(nums, {%{}, 0}, fn num, {map, index} ->
+      comp = target - num
+
+      if Map.has_key?(map, comp) do
+        {:halt, [Map.get(map, comp), index]}
+      else
+        {:cont, {Map.put(map, num, index), index + 1}}
+      end
+    end)
   end
 end
